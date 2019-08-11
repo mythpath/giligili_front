@@ -1,4 +1,8 @@
-# my_first_project
+# giligili_back
+
+## project address
+
+https://github.com/mythpath/giligili_front
 
 ## Project setup
 
