@@ -5,21 +5,25 @@ import Home from './views/Home.vue'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'home',
       component: Home
     },
     {
-      path:'/postVideo',
-      name:'postVideo',
-      component: () => import(/* webpackChunkName: "video" */ './views/PostVideo.vue')
+      path: '/postVideo',
+      name: 'postVideo',
+      component: () => import( /* webpackChunkName: "video" */ './views/PostVideo.vue')
+    },
+    {
+      path: '/video/:videoID',
+      name: 'showVideo',
+      component: () => import( /* webpackChunkName: "video" */ './views/ShowVideo.vue')
     },
     {
       path: '/about',
       name: 'about',
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      component: () => import( /* webpackChunkName: "about" */ './views/About.vue')
     }
   ]
 })

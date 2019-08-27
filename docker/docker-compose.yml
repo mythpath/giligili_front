@@ -1,0 +1,8 @@
+version: '2'
+
+services: 
+  violet:
+    image: //concrete docker repository address
+    restart: always
+    ports: 
+      - 3010:80
