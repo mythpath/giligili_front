@@ -7,12 +7,13 @@ const postVideo = form => axios.post("/api/v1/videos", form).then(res => res.dat
 const getVideo = id => axios.get(`/api/v1/video/${id}`).then(res => res.data);
 
 // 读取视频列表
-const getVideos = (start, limit) =>
+const getVideos = (start, limit, search) =>
   axios
   .get("/api/v1/videos", {
     params: {
       start,
-      limit
+      limit,
+      search
     }
   })
   .then(res => res.data);

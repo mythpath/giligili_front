@@ -48,7 +48,7 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
+<style>
 .video-player-box {
   max-width: 100%;
 }
