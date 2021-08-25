@@ -1,15 +1,15 @@
 import axios from "axios";
 
 // 创建视频
-const postVideo = form => axios.post("/api/v1/videos", form).then(res => res.data);
+const postVideo = form => axios.post("/api/objs/video", form).then(res => res.data);
 
 // 读视频详情
-const getVideo = id => axios.get(`/api/v1/video/${id}`).then(res => res.data);
+const getVideo = id => axios.get(`/api/objs/video/${id}`).then(res => res.data);
 
 // 读取视频列表
 const getVideos = (start, limit, search) =>
   axios
-  .get("/api/v1/videos", {
+  .get("/api/objs/video", {
     params: {
       start,
       limit,

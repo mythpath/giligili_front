@@ -71,12 +71,12 @@ export default {
     },
     load() {
       API.getVideos(this.start, this.limit, this.searchItem).then((res) => {
-        this.videos = res.data.items;
+        this.videos = res.data.items.data;
         this.total = res.data.total;
       });
     },
     goVideo(video) {
-      this.$router.push({ name: "showVideo", params: { videoID: video.id } });
+      this.$router.push({ name: "showVideo", params: { videoID: video.ID } });
     },
     search() {
       this.searchItem = this.input;
